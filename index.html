@@ -1,0 +1,541 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1771783004069785');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1771783004069785&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+  <meta charset="UTF-8">
+  <title>Shivi ad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2542343319553464&ev=PageView&noscript=1" /></noscript>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .video-bg {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 11, 24, 0.88);
+      z-index: -1;
+    }
+
+    .rb-circles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .rb-circle {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(50, 120, 220, 0.07);
+    }
+
+    .rb-c1 {
+      width: 600px;
+      height: 600px;
+      top: -250px;
+      right: -200px;
+    }
+
+    .rb-c2 {
+      width: 400px;
+      height: 400px;
+      bottom: -150px;
+      left: -150px;
+      border-color: rgba(50, 120, 220, 0.05);
+    }
+
+    .rb-c3 {
+      width: 220px;
+      height: 220px;
+      top: 35%;
+      right: 8%;
+      border-color: rgba(50, 120, 220, 0.06);
+    }
+
+    .rb-glow {
+      position: fixed;
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 350px;
+      background: radial-gradient(ellipse, rgba(30, 90, 200, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .rb-card {
+      width: 100%;
+      max-width: 410px;
+      position: relative;
+      z-index: 2;
+      animation: rb-up 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    @keyframes rb-up {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .rb-top {
+      background: #06121f;
+      border: 1px solid rgba(50, 120, 220, 0.22);
+      border-radius: 28px 28px 0 0;
+      padding: 36px 28px 28px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .rb-top::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #2a7fff, #7b5ea7, transparent);
+    }
+
+    .rb-avatar-ring {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, #2a7fff, #7b5ea7);
+      position: relative;
+    }
+
+    .rb-avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #06121f;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      color: #2a7fff;
+    }
+
+    .rb-avatar-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .rb-verified {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      width: 26px;
+      height: 26px;
+      background: #2a7fff;
+      border-radius: 50%;
+      border: 2px solid #06121f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .rb-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: #e8f0ff;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+
+    .rb-name span {
+      color: #5599ff;
+    }
+
+    .rb-designation {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(42, 127, 255, 0.1);
+      border: 1px solid rgba(42, 127, 255, 0.22);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 11px;
+      color: #6aabff;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    .rb-body {
+      background: #04101c;
+      border: 1px solid rgba(50, 120, 220, 0.15);
+      border-top: none;
+      border-radius: 0 0 28px 28px;
+      padding: 24px 28px 28px;
+    }
+
+    .rb-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .rb-stat {
+      background: rgba(42, 127, 255, 0.06);
+      border: 1px solid rgba(42, 127, 255, 0.14);
+      border-radius: 14px;
+      padding: 14px 8px;
+      text-align: center;
+    }
+
+    .rb-stat-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px;
+      font-weight: 700;
+      color: #5599ff;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .rb-stat-lbl {
+      font-size: 9px;
+      color: #2a4a7a;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .rb-features {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .rb-feat {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .rb-feat-dot {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: rgba(42, 127, 255, 0.08);
+      border: 1px solid rgba(42, 127, 255, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .rb-feat-text {
+      font-size: 13px;
+      color: #7a9ac0;
+      font-weight: 400;
+    }
+
+    .rb-trust {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .rb-trust-pill {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 11px;
+      color: #3a5070;
+      font-weight: 500;
+    }
+
+    .rb-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #1258c0, #2a7fff);
+      color: #fff;
+      text-decoration: none;
+      padding: 16px;
+      border-radius: 16px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .rb-btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+      animation: rb-shine 2.8s infinite;
+    }
+
+    @keyframes rb-shine {
+      0% {
+        left: -100%;
+      }
+
+      100% {
+        left: 200%;
+      }
+    }
+
+    .rb-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .rb-disclaimer {
+      font-size: 9.5px;
+      color: #355380;
+      line-height: 1.4;
+      text-align: center;
+      margin-bottom: 16px;
+      padding: 0 4px;
+      font-weight: 400;
+    }
+
+    .rb-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid rgba(42, 127, 255, 0.08);
+    }
+
+    .rb-footer-txt {
+      font-size: 11px;
+      color: #1e3050;
+      font-weight: 400;
+    }
+
+    .rb-agency {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #5599ff;
+      text-decoration: none;
+      border: 1px solid rgba(42, 127, 255, 0.25);
+      padding: 5px 12px;
+      border-radius: 6px;
+    }
+
+    .rb-countdown-container {
+      background: rgba(42, 127, 255, 0.04);
+      border: 1px dashed rgba(42, 127, 255, 0.2);
+      border-radius: 14px;
+      padding: 12px 16px;
+      margin-bottom: 22px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .rb-countdown-text {
+      font-size: 12px;
+      color: #7a9ac0;
+      font-weight: 500;
+    }
+
+    .rb-countdown-timer {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #ff5555;
+      background: rgba(255, 85, 85, 0.1);
+      padding: 2px 10px;
+      border-radius: 6px;
+      min-width: 40px;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <video class="video-bg" autoplay muted loop playsinline>
+    <source src="https://assets.mixkit.co/videos/9607/9607-720.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+
+  <div class="rb-circles">
+    <div class="rb-circle rb-c1"></div>
+    <div class="rb-circle rb-c2"></div>
+    <div class="rb-circle rb-c3"></div>
+  </div>
+  <div class="rb-glow"></div>
+
+  <div class="rb-card">
+    <div class="rb-top">
+      <div class="rb-avatar-ring">
+        <div class="rb-avatar-inner">
+          <img src="image.png" alt="CA Nitin Murarka"
+            onerror="this.style.display='none';this.parentNode.innerHTML='NM'">
+        </div>
+        <div class="rb-verified">✓</div>
+      </div>
+      <div class="rb-name">PANKAJ-BHARDWAJ</div>
+    </div>
+
+
+    <div class="rb-body">
+      <div class="rb-stats">
+        <div class="rb-stat">
+          <div class="rb-stat-val">24/7</div>
+          <div class="rb-stat-lbl">Updates</div>
+        </div>
+        <div class="rb-stat">
+          <div class="rb-stat-val">Free</div>
+          <div class="rb-stat-lbl">To Join</div>
+        </div>
+        <div class="rb-stat">
+          <div class="rb-stat-val">Live</div>
+          <div class="rb-stat-lbl">Calls</div>
+        </div>
+      </div>
+      
+      <!-- Added id="telegram-btn" here -->
+      <a href="https://telegram.me/+xZdVtLjTZOBlZjU1" id="telegram-btn" class="rb-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+          <path
+            d="M16 8a8 8 0 1 1-16 0 8 8 0 0 1 16 0zM6.79 10.89l-.27 3.67c.39 0 .56-.17.77-.38l1.85-1.76 3.84 2.8c.7.39 1.19.19 1.36-.65l2.47-11.59c.22-.98-.35-1.37-1.05-1.14L1.13 6.24c-.95.37-.93.9-.17 1.14l3.57 1.11 8.3-5.23c.39-.26.74-.12.45.14L6.79 10.89z" />
+        </svg>
+        JOIN OUR TEAM
+      </a>
+
+      <div class="rb-features">
+        <div class="rb-feat">
+          <div class="rb-feat-dot">📊</div>
+          <div class="rb-feat-text">Market Insights & Discussions</div>
+        </div>
+        <div class="rb-feat">
+          <div class="rb-feat-dot">🎓</div>
+          <div class="rb-feat-text">Learn with Experts</div>
+        </div>
+        <div class="rb-feat">
+          <div class="rb-feat-dot">⚡</div>
+          <div class="rb-feat-text">Practical Trading Strategies</div>
+        </div>
+      </div>
+
+      <div class="rb-trust">
+        <div class="rb-trust-pill">✦ Trusted Community</div>
+        <div class="rb-trust-pill">✦ CA Backed</div>
+      </div>
+
+      <div class="rb-countdown-container">
+        <span class="rb-countdown-text">⏳ Redirecting to official channel in</span>
+        <span class="rb-countdown-timer" id="timer-badge">12s</span>
+      </div>
+
+      <div class="rb-disclaimer">
+        DISCLAIMER: This platform is intended solely for educational and informational purposes. It does not provide investment, trading, financial, or advisory services. Please conduct your own research and consult qualified professionals before making any financial decisions.
+      </div>
+
+      <div class="rb-footer">
+        <div class="rb-footer-txt">@Adzonn · Stay ahead with knowledge</div>
+        <a href="https://t.me/+ahlminu0Ax4yYmFl" target="_blank" class="rb-agency">📱 SIVIADSAGENCY</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script for Countdown and Auto-Redirect -->
+  <script>
+    let timeLeft = 12; // Timer set to 3 seconds
+    const timerElement = document.getElementById('timer-badge');
+    const targetUrl = document.getElementById('telegram-btn').getAttribute('href');
+
+    // Initial display set
+    timerElement.textContent = timeLeft + 's';
+
+    const countdown = setInterval(() => {
+      timeLeft--;
+      timerElement.textContent = timeLeft + 's';
+
+      if (timeLeft <= 0) {
+        clearInterval(countdown);
+        timerElement.textContent = "0s";
+        window.location.href = targetUrl;
+      }
+    }, 1000);
+  </script>
+</body>
+
+</html>
